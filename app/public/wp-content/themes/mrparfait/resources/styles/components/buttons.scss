@@ -1,0 +1,34 @@
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+    font-size: 1rem;
+    background-color: $primaryColor;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: .2s;
+    cursor: pointer;
+    
+    &:hover{
+        background: $textColor;
+        color: white;
+    }
+    &:focus {
+        background: lighten($textColor, 10%);
+    }
+    &.secondary {
+        background: $textColor;
+
+        &:hover {
+            background: $primaryColor;
+        }
+    }
+    
+    &:focus {
+        background: darken($primaryColor, 10%);
+    }
+}
